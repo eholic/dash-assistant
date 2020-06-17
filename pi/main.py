@@ -53,7 +53,7 @@ def press_to_assist(q):
         mac = q.get().upper()
         if last_mac == mac and time.time() - last_press < 1: # ignore multi messages within short time
             continue
-        logging.info(mac + 'is pressed.')
+        logging.info(mac + ' is pressed.')
         if mac in Config.actions.keys():
             gassist(Config.actions[mac])
         last_press = time.time()
