@@ -7,7 +7,8 @@ class Config:
     DEVICE_MODEL_ID = os.getenv('DEVICE_MODEL_ID')
     if DEVICE_MODEL_ID is None:
         raise Exception('DEVICE_MODEL_ID is missing.')
-    CREDENTIALS = os.path.join(os.environ['HOME'], '.config/google-oauthlib-tool/credentials.json')
+    CREDENTIALS = os.getenv('CREDENTIALS',
+                            os.path.join(os.getenv('HOME', ''), '.config/google-oauthlib-tool/credentials.json'))
 
     if os.path.exists('dashes.local.yml'):
         dash_yml = 'dashes.local.yml'
