@@ -42,7 +42,7 @@ def is_amazon_dev(pkt):
 def dash_sniff(prn):
     try:
         print('Ready to press Amazon Dash Button')
-        # doc: https://scapy.readthedocs.io/en/latest/api/scapy.sendrecv.html#scapy.sendrecv.sniff
+        # API doc: https://scapy.readthedocs.io/en/latest/api/scapy.sendrecv.html#scapy.sendrecv.sniff
         sniff(filter="arp or (udp and src port 68 and dst port 67 and src host 0.0.0.0)",
               prn=prn,
               store=False,
@@ -54,5 +54,6 @@ def dash_sniff(prn):
 
 
 if __name__ == '__main__':
+    # just printing MAC
     dash_sniff(lambda pkt: print(pkt.src))
 

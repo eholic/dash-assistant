@@ -1,5 +1,5 @@
 __pychache__
 *.json
 *.pyc
-*.log
+*.log*
 dashes.local.yml
