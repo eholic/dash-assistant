@@ -51,3 +51,8 @@ Ready to press Amazon Dash Button
 2020-06-17 21:32:02,384 - root - INFO - 12:34:56:78:90:AA is pressed.
 2020-06-17 21:32:02,391 - root - INFO - Turn on TV
 ```
+
+## References
+- [googlesamples/assistant-sdk-python - textinput.py](https://github.com/googlesamples/assistant-sdk-python/blob/master/google-assistant-sdk/googlesamples/assistant/grpc/textinput.py)
+- [Nekmo/amazon-dash](https://github.com/Nekmo/amazon-dash)
+
