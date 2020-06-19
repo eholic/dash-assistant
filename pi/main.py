@@ -28,8 +28,11 @@ if __name__ == '__main__':
     with open('logging.yml', 'r') as f:
         log_yml = yaml.safe_load(f.read())
     logging.config.dictConfig(log_yml)
+    logging.info('dash-assistant started')
 
+    # Run thread waiting dash's MAC
     q = queue.Queue()
     threading.Thread(target=press_to_assist, daemon=True, args=(q, )).start()
 
+    # Start sniffing dash's MAC
     dash_sniff(lambda pkt: q.put(pkt.src))

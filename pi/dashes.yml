@@ -1,6 +1,4 @@
 actions:
-  # "dash's mac address": 'text request to Google Assistant'
-  "XX:XX:XX:XX:XX:XX": 'ぴよログにおしっこの記録を頼みたい'   # evian
-  "XX:XX:XX:XX:XX:XX": 'ぴよログにうんちの記録を頼みたい'     # braun
-  "XX:XX:XX:XX:XX:XX": 'ぴよログに寝たことの記録を頼みたい'   # wilkinson
-  "XX:XX:XX:XX:XX:XX": 'ぴよログに起きたことの記録を頼みたい' # nescafe
+  # "dash's mac address": "text request to Google Assistantr"
+  "12:34:56:78:90:AA": "Turn on TV"
+  "12:34:56:78:90:BB": "Turn off TV"
