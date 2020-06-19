@@ -8,6 +8,7 @@ Follow the instruction of Google Assistant SDK.
 - [Configure a Developer Project and Account Settings](https://developers.google.com/assistant/sdk/guides/service/python/embed/config-dev-project-and-account)
 - [Register the Device Model](https://developers.google.com/assistant/sdk/guides/service/python/embed/register-device)
 - [Install SDK and Sample Code](https://developers.google.com/assistant/sdk/guides/service/python/embed/install-sample)
+
 End of the instruction, you would have `DEVICE_MODEL_ID` and `credentials.json`.
 
 Also, you need to install some libraries.
@@ -22,7 +23,14 @@ Set the following environment values for Google Assistant.
 - `DEVICE_MODEL_ID` Identifier defined by Actions Console
 - `CREDENTIALS` Path of `credentials.json`
 
-You can modify [config.py](pi/config.py) directly.
+```bash
+# example
+export DEVICE_ID=`uuid`
+export DEVICE_MODEL_ID="my-devices-project-prototype-light-v1"
+export CREDENTIALS="/path/to/.config/google-oauthlib-tool/credentials.json"
+```
+
+You could modify [config.py](pi/config.py) directly.
 
 And, please associate your own amazon dash's MAC with Google Assistant request in [dashes.yml](pi/dashes.yml).
 ```yaml
