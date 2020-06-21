@@ -1,5 +1,6 @@
 import os
 import sys
+import requests
 import logging
 import json
 import google.auth.transport.grpc
@@ -26,7 +27,8 @@ def gassist(text_query, lang_code='en-US'):
     try:
         with open(Config.CREDENTIALS, 'r') as f:
             credentials = google.oauth2.credentials.Credentials(token=None, **json.load(f))
-            http_request = google.auth.transport.requests.Request()
+            session = requests.Session()
+            http_request = google.auth.transport.requests.Request(session)
             credentials.refresh(http_request)
     except Exception as e:
         logging.error('Error loading credentials', exc_info=True)
@@ -71,6 +73,8 @@ def gassist(text_query, lang_code='en-US'):
 
     text, html = assist(text_query)
     logging.info(text)
+    grpc_channel.close()
+    session.close()
     return text
 
 if __name__ == '__main__':
