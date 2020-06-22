@@ -14,7 +14,7 @@ End of the instruction, you would have `DEVICE_MODEL_ID` and `credentials.json`.
 Also, you need to install some libraries.
 ```bash
 $ sudo apt install tcpdump
-$ pip install -r pi/requirements.txt
+$ pip install -r requirements.txt
 ```
 
 ## Usage
@@ -30,9 +30,9 @@ export DEVICE_MODEL_ID="my-devices-project-prototype-light-v1"
 export CREDENTIALS="/path/to/.config/google-oauthlib-tool/credentials.json"
 ```
 
-You could modify [config.py](pi/config.py) directly.
+You could modify [config.py](config.py) directly.
 
-And, please associate your own amazon dash's MAC with Google Assistant request in [dashes.yml](pi/dashes.yml).
+And, please associate your own amazon dash's MAC with Google Assistant request in [dashes.yml](dashes.yml).
 ```yaml
 # example of dashes.yml
 actions:
@@ -42,9 +42,9 @@ actions:
 
 ```
 
-You can inspect MAC by running [amazon_dash.py](pi/amazon_dash.py) or use other libraries (e.g. [Nekmo/amazon-dash](https://github.com/Nekmo/amazon-dash))
+You can inspect MAC by running [amazon_dash.py](amazon_dash.py) or use other libraries (e.g. [Nekmo/amazon-dash](https://github.com/Nekmo/amazon-dash))
 
-Then, run [main.py](pi/main.py).
+Then, run [main.py](main.py).
 ```bash
 $ sudo -E python3 main.py
 Ready to press Amazon Dash Button
