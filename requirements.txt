@@ -2,4 +2,4 @@ google-assistant-grpc==0.3.0
 google-auth==1.17.2
 requests==2.23.0
 scapy==2.4.3
-PyYaml==5.3.1
+PyYaml==5.4
